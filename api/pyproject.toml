@@ -1,0 +1,48 @@
+[project]
+name = "reverse-business-failure-api"
+version = "0.1.0"
+description = "Evidence-first business failure research API"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115,<1.0",
+  "uvicorn[standard]>=0.30,<1.0",
+  "pydantic>=2.8,<3.0",
+  "pydantic-settings>=2.4,<3.0",
+  "SQLAlchemy>=2.0,<3.0",
+  "psycopg[binary]>=3.2,<4.0",
+  "aiosqlite>=0.20,<1.0",
+  "httpx>=0.27,<1.0",
+  "python-multipart>=0.0.9,<1.0",
+  "langgraph==0.6.11",
+  "pandas>=2.2,<3.0",
+  "numpy>=2.0,<3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3,<9.0",
+  "pytest-asyncio>=0.24,<1.0",
+  "pytest-cov>=5.0,<7.0",
+  "ruff>=0.6,<1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+exclude = ["data*", "tests*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+# FastAPI dependency defaults and graph boundary exception handling are intentional.
+ignore = ["B008", "BLE001", "FURB162"]
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"

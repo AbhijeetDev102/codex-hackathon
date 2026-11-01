@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "generated_for": "offline demo and automated replay tests",
+  "content_notice": "All excerpts, values, summaries, hypotheses, and claims in this fixture are synthetic, concise demo representations. They are evidence-shaped test data, not investment research or source-document replacements.",
+  "cases": [
+    {
+      "key": "wework",
+      "company": {
+        "legal_name": "WeWork Inc.",
+        "cik": "1533523",
+        "ticker": "WE",
+        "website": "https://www.wework.com/",
+        "status": "bankruptcy"
+      },
+      "sources": [
+        {
+          "source_key": "S-001",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001533523",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "published_at": "2023-11-06",
+          "source_type": "filing",
+          "title": "WeWork bankruptcy-related filing index"
+        },
+        {
+          "source_key": "S-002",
+          "url": "https://investor.wework.com/",
+          "publisher": "WeWork Investor Relations",
+          "published_at": "2023-08-08",
+          "source_type": "filing",
+          "title": "WeWork going-concern disclosure index"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_key": "E-001",
+          "source_key": "S-001",
+          "text": "Synthetic fixture excerpt: the company disclosed a Chapter 11 bankruptcy filing in November 2023.",
+          "quote_start": 0,
+          "quote_end": 99
+        },
+        {
+          "evidence_key": "E-002",
+          "source_key": "S-002",
+          "text": "Synthetic fixture excerpt: management reported substantial doubt about the company's ability to continue as a going concern without additional liquidity measures.",
+          "quote_start": 0,
+          "quote_end": 154
+        },
+        {
+          "evidence_key": "E-003",
+          "source_key": "S-002",
+          "text": "Synthetic fixture excerpt: the business faced lease obligations and operating losses while seeking cost reductions and capital alternatives.",
+          "quote_start": 0,
+          "quote_end": 127
+        }
+      ],
+      "events": [
+        {
+          "date": "2021-10-21",
+          "date_precision": "day",
+          "category": "public_listing",
+          "description": "Synthetic timeline event: WeWork began trading as a public company.",
+          "evidence_keys": ["E-003"],
+          "confidence": "moderate",
+          "verified": true
+        },
+        {
+          "date": "2023-08-08",
+          "date_precision": "day",
+          "category": "going_concern",
+          "description": "Synthetic timeline event: a going-concern warning was disclosed.",
+          "evidence_keys": ["E-002"],
+          "confidence": "high",
+          "verified": true
+        },
+        {
+          "date": "2023-11-06",
+          "date_precision": "day",
+          "category": "bankruptcy",
+          "description": "Synthetic timeline event: a Chapter 11 bankruptcy filing was disclosed.",
+          "evidence_keys": ["E-001"],
+          "confidence": "high",
+          "verified": true
+        }
+      ],
+      "metrics": [
+        {"metric": "revenue", "period": "2022-Q1", "value": 718000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-003"},
+        {"metric": "revenue", "period": "2022-Q2", "value": 815000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-003"},
+        {"metric": "revenue", "period": "2023-Q1", "value": 849000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-003"},
+        {"metric": "cash", "period": "2022-Q2", "value": 820000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-003"},
+        {"metric": "cash", "period": "2023-Q2", "value": 680000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-002"},
+        {"metric": "net_loss", "period": "2022-Q2", "value": -635000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-003"},
+        {"metric": "burn", "period": "2023-Q2", "value": -185000000, "unit": "USD", "kind": "derived", "evidence_key": "E-002"}
+      ],
+      "outcome": {
+        "status": "bankruptcy",
+        "summary": "The fixture classifies the outcome as bankruptcy because a bankruptcy filing is directly represented by E-001.",
+        "evidence_keys": ["E-001"],
+        "confidence": "high",
+        "verified": true
+      },
+      "inflections": [
+        {"period": "2023-Q2", "metric": "cash", "size": -0.17, "explanation": "Synthetic turning point: lower available cash coincided with the disclosed going-concern warning; timing is not proof of cause.", "evidence_keys": ["E-002"]}
+      ],
+      "hypotheses": [
+        {
+          "mechanism": "A large fixed lease-obligation base and recurring losses may have reduced flexibility when liquidity was constrained.",
+          "supports": ["E-002", "E-003"],
+          "contradicts": [],
+          "missing": ["A complete lease-by-lease cash-flow model"],
+          "confidence": "moderate",
+          "critic_notes": "The fixture cannot establish that this mechanism alone caused bankruptcy."
+        },
+        {
+          "mechanism": "Reliance on additional financing may have increased exposure when capital alternatives narrowed.",
+          "supports": ["E-002"],
+          "contradicts": [],
+          "missing": ["Private financing negotiations and counterfactual funding terms"],
+          "confidence": "low",
+          "critic_notes": "Evidence supports liquidity pressure, not a unique causal chain."
+        }
+      ],
+      "claims": [
+        {"text": "WeWork disclosed a Chapter 11 bankruptcy filing in November 2023.", "cited_evidence_keys": ["E-001"], "result": "supported", "reason": "Fixture quote directly represents the filing."},
+        {"text": "WeWork's lease model definitively caused the bankruptcy.", "cited_evidence_keys": ["E-003"], "result": "unsupported", "reason": "A contributing mechanism is plausible but direct causation cannot be proven from the fixture."}
+      ],
+      "pattern_match": {"archetype_key": "fixed_cost_liquidity_crunch", "similar_case_keys": ["bed_bath_beyond", "sears"], "similarities": ["liquidity pressure", "fixed commitments"], "differences": ["business model and capital structure differ"]}
+    },
+    {
+      "key": "bed_bath_beyond",
+      "company": {
+        "legal_name": "Bed Bath & Beyond Inc.",
+        "cik": "886158",
+        "ticker": "BBBY",
+        "website": "https://www.bedbathandbeyond.com/",
+        "status": "bankruptcy"
+      },
+      "sources": [
+        {"source_key": "S-101", "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000886158", "publisher": "U.S. Securities and Exchange Commission", "published_at": "2023-04-23", "source_type": "filing", "title": "Bed Bath & Beyond bankruptcy-related filing index"},
+        {"source_key": "S-102", "url": "https://bedbathandbeyond.gcs-web.com/", "publisher": "Bed Bath & Beyond Investor Relations", "published_at": "2023-01-05", "source_type": "filing", "title": "Bed Bath & Beyond liquidity disclosure index"}
+      ],
+      "evidence": [
+        {"evidence_key": "E-101", "source_key": "S-101", "text": "Synthetic fixture excerpt: the company disclosed a voluntary Chapter 11 filing in April 2023.", "quote_start": 0, "quote_end": 91},
+        {"evidence_key": "E-102", "source_key": "S-102", "text": "Synthetic fixture excerpt: management described liquidity constraints, operating losses, and actions to reduce costs and preserve cash.", "quote_start": 0, "quote_end": 126},
+        {"evidence_key": "E-103", "source_key": "S-102", "text": "Synthetic fixture excerpt: comparable-store sales pressure and inventory execution challenges were reported as business risks.", "quote_start": 0, "quote_end": 113}
+      ],
+      "events": [
+        {"date": "2023-01-05", "date_precision": "day", "category": "liquidity_warning", "description": "Synthetic timeline event: liquidity and going-concern risk was disclosed.", "evidence_keys": ["E-102"], "confidence": "high", "verified": true},
+        {"date": "2023-04-23", "date_precision": "day", "category": "bankruptcy", "description": "Synthetic timeline event: Chapter 11 filing disclosed.", "evidence_keys": ["E-101"], "confidence": "high", "verified": true}
+      ],
+      "metrics": [
+        {"metric": "revenue", "period": "2022-Q2", "value": 1460000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-103"},
+        {"metric": "revenue", "period": "2022-Q3", "value": 1260000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-103"},
+        {"metric": "cash", "period": "2022-Q2", "value": 180000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-102"},
+        {"metric": "cash", "period": "2022-Q3", "value": 153000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-102"},
+        {"metric": "net_loss", "period": "2022-Q3", "value": -393000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-102"},
+        {"metric": "burn", "period": "2022-Q3", "value": -99000000, "unit": "USD", "kind": "derived", "evidence_key": "E-102"}
+      ],
+      "outcome": {"status": "bankruptcy", "summary": "The fixture classifies the outcome as bankruptcy based on E-101.", "evidence_keys": ["E-101"], "confidence": "high", "verified": true},
+      "inflections": [{"period": "2022-Q3", "metric": "revenue", "size": -0.137, "explanation": "Synthetic turning point: revenue decline appeared alongside stated operating and liquidity pressure; correlation is not proof of cause.", "evidence_keys": ["E-102", "E-103"]}],
+      "hypotheses": [
+        {"mechanism": "Sustained operating losses and liquidity constraints may have limited the time available to execute a turnaround.", "supports": ["E-102"], "contradicts": [], "missing": ["Detailed turnaround economics"], "confidence": "moderate", "critic_notes": "The fixture does not isolate individual management decisions."},
+        {"mechanism": "Demand and inventory execution pressure may have weakened the retail operating model.", "supports": ["E-103"], "contradicts": [], "missing": ["Store-level cohort data"], "confidence": "low", "critic_notes": "The evidence establishes a risk factor, not a complete causal explanation."}
+      ],
+      "claims": [
+        {"text": "Bed Bath & Beyond disclosed a Chapter 11 filing in April 2023.", "cited_evidence_keys": ["E-101"], "result": "supported", "reason": "Direct fixture representation."},
+        {"text": "Inventory execution alone caused the filing.", "cited_evidence_keys": ["E-103"], "result": "unsupported", "reason": "The fixture records multiple possible contributors."}
+      ],
+      "pattern_match": {"archetype_key": "retail_demand_execution", "similar_case_keys": ["sears", "toys_r_us"], "similarities": ["retail operating pressure", "liquidity risk"], "differences": ["capital structure and time period differ"]}
+    },
+    {
+      "key": "bird_global",
+      "company": {
+        "legal_name": "Bird Global, Inc.",
+        "cik": "1577967",
+        "ticker": "BRDS",
+        "website": "https://www.bird.co/",
+        "status": "bankruptcy"
+      },
+      "sources": [
+        {"source_key": "S-201", "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001577967", "publisher": "U.S. Securities and Exchange Commission", "published_at": "2023-12-20", "source_type": "filing", "title": "Bird Global bankruptcy-related filing index"},
+        {"source_key": "S-202", "url": "https://investors.bird.co/", "publisher": "Bird Global Investor Relations", "published_at": "2023-11-01", "source_type": "filing", "title": "Bird Global liquidity disclosure index"}
+      ],
+      "evidence": [
+        {"evidence_key": "E-201", "source_key": "S-201", "text": "Synthetic fixture excerpt: the company disclosed a Chapter 11 process in December 2023.", "quote_start": 0, "quote_end": 88},
+        {"evidence_key": "E-202", "source_key": "S-202", "text": "Synthetic fixture excerpt: management reported a constrained liquidity position and a need to pursue strategic alternatives.", "quote_start": 0, "quote_end": 118},
+        {"evidence_key": "E-203", "source_key": "S-202", "text": "Synthetic fixture excerpt: lower demand and operational costs created pressure on profitability and cash generation.", "quote_start": 0, "quote_end": 105}
+      ],
+      "events": [
+        {"date": "2023-11-01", "date_precision": "day", "category": "liquidity_warning", "description": "Synthetic timeline event: constrained liquidity and strategic alternatives were disclosed.", "evidence_keys": ["E-202"], "confidence": "high", "verified": true},
+        {"date": "2023-12-20", "date_precision": "day", "category": "bankruptcy", "description": "Synthetic timeline event: Chapter 11 process disclosed.", "evidence_keys": ["E-201"], "confidence": "high", "verified": true}
+      ],
+      "metrics": [
+        {"metric": "revenue", "period": "2022-Q4", "value": 69000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-203"},
+        {"metric": "revenue", "period": "2023-Q2", "value": 55000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-203"},
+        {"metric": "cash", "period": "2022-Q4", "value": 68000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-202"},
+        {"metric": "cash", "period": "2023-Q2", "value": 25000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-202"},
+        {"metric": "net_loss", "period": "2023-Q2", "value": -51000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-203"},
+        {"metric": "burn", "period": "2023-Q2", "value": -23000000, "unit": "USD", "kind": "derived", "evidence_key": "E-202"}
+      ],
+      "outcome": {"status": "bankruptcy", "summary": "The fixture classifies the outcome as bankruptcy based on E-201.", "evidence_keys": ["E-201"], "confidence": "high", "verified": true},
+      "inflections": [{"period": "2023-Q2", "metric": "cash", "size": -0.632, "explanation": "Synthetic turning point: cash fell while liquidity constraints were disclosed; timing alone is not causal proof.", "evidence_keys": ["E-202"]}],
+      "hypotheses": [
+        {"mechanism": "Demand pressure and operating costs may have weakened cash generation before available liquidity was exhausted.", "supports": ["E-202", "E-203"], "contradicts": [], "missing": ["Route-level unit economics"], "confidence": "moderate", "critic_notes": "The fixture does not quantify the contribution of each cost category."},
+        {"mechanism": "Limited financing flexibility may have accelerated the need for a restructuring process.", "supports": ["E-202"], "contradicts": [], "missing": ["Financing term sheets"], "confidence": "low", "critic_notes": "The evidence is directional rather than conclusive."}
+      ],
+      "claims": [
+        {"text": "Bird Global disclosed a Chapter 11 process in December 2023.", "cited_evidence_keys": ["E-201"], "result": "supported", "reason": "Direct fixture representation."},
+        {"text": "Lower demand was the sole cause of Bird Global's bankruptcy.", "cited_evidence_keys": ["E-203"], "result": "unsupported", "reason": "Liquidity and operating factors also appear in the fixture."}
+      ],
+      "pattern_match": {"archetype_key": "unit_economics_liquidity", "similar_case_keys": ["wework", "peloton"], "similarities": ["cash pressure", "operating model sensitivity"], "differences": ["market and asset model differ"]}
+    },
+    {
+      "key": "carvana",
+      "company": {
+        "legal_name": "Carvana Co.",
+        "cik": "1690820",
+        "ticker": "CVNA",
+        "website": "https://investors.carvana.com/",
+        "status": "active"
+      },
+      "sources": [
+        {"source_key": "S-301", "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001690820", "publisher": "U.S. Securities and Exchange Commission", "published_at": "2023-12-31", "source_type": "filing", "title": "Carvana annual filing index"},
+        {"source_key": "S-302", "url": "https://investors.carvana.com/", "publisher": "Carvana Investor Relations", "published_at": "2023-07-19", "source_type": "filing", "title": "Carvana debt-restructuring disclosure index"}
+      ],
+      "evidence": [
+        {"evidence_key": "E-301", "source_key": "S-301", "text": "Synthetic fixture excerpt: the company remained an operating public company after its period of financial stress.", "quote_start": 0, "quote_end": 106},
+        {"evidence_key": "E-302", "source_key": "S-302", "text": "Synthetic fixture excerpt: management reported debt-restructuring actions and operating changes intended to improve liquidity and profitability.", "quote_start": 0, "quote_end": 137},
+        {"evidence_key": "E-303", "source_key": "S-301", "text": "Synthetic fixture excerpt: demand and unit economics were sensitive to financing conditions and used-vehicle market dynamics.", "quote_start": 0, "quote_end": 118}
+      ],
+      "events": [
+        {"date": "2022-11-03", "date_precision": "day", "category": "distress", "description": "Synthetic timeline event: financial stress and operating pressure were discussed.", "evidence_keys": ["E-303"], "confidence": "moderate", "verified": true},
+        {"date": "2023-07-19", "date_precision": "day", "category": "debt_restructuring", "description": "Synthetic timeline event: debt-restructuring actions were reported.", "evidence_keys": ["E-302"], "confidence": "high", "verified": true},
+        {"date": "2023-12-31", "date_precision": "day", "category": "survival_control", "description": "Synthetic timeline event: the company continued operating; no bankruptcy outcome is represented in this fixture.", "evidence_keys": ["E-301"], "confidence": "high", "verified": true}
+      ],
+      "metrics": [
+        {"metric": "revenue", "period": "2022-Q2", "value": 3880000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-303"},
+        {"metric": "revenue", "period": "2022-Q4", "value": 2660000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-303"},
+        {"metric": "revenue", "period": "2023-Q4", "value": 2420000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-301"},
+        {"metric": "cash", "period": "2022-Q4", "value": 434000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-303"},
+        {"metric": "cash", "period": "2023-Q4", "value": 530000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-301"},
+        {"metric": "net_loss", "period": "2022-Q4", "value": -806000000, "unit": "USD", "kind": "disclosed", "evidence_key": "E-303"},
+        {"metric": "burn", "period": "2023-Q4", "value": -50000000, "unit": "USD", "kind": "derived", "evidence_key": "E-302"}
+      ],
+      "outcome": {"status": "distress_without_failure", "summary": "The fixture treats Carvana as a survivor control: it records material stress but no supported bankruptcy, delisting, or wind-down outcome.", "evidence_keys": ["E-301", "E-302"], "confidence": "high", "verified": true},
+      "inflections": [{"period": "2022-Q4", "metric": "revenue", "size": -0.314, "explanation": "Synthetic turning point: revenue declined during financing-sensitive market pressure; the timing does not establish cause.", "evidence_keys": ["E-303"]}],
+      "hypotheses": [
+        {"mechanism": "Debt restructuring and operating changes may have provided more time to address liquidity and profitability pressure.", "supports": ["E-302", "E-301"], "contradicts": [], "missing": ["Counterfactual results without restructuring"], "confidence": "moderate", "critic_notes": "The fixture supports survival actions, not a proof that they caused recovery."},
+        {"mechanism": "Improved market conditions may have contributed to stabilization.", "supports": ["E-303"], "contradicts": [], "missing": ["Market-adjusted peer analysis"], "confidence": "insufficient", "critic_notes": "No direct fixture evidence compares the company with peers."}
+      ],
+      "claims": [
+        {"text": "Carvana is a survivor control in this fixture, not a declared failure.", "cited_evidence_keys": ["E-301"], "result": "supported", "reason": "The fixture represents ongoing operations and no failure filing."},
+        {"text": "Carvana's debt restructuring guaranteed recovery.", "cited_evidence_keys": ["E-302"], "result": "unsupported", "reason": "The fixture cannot prove a guarantee or single causal outcome."}
+      ],
+      "pattern_match": {"archetype_key": "leverage_refinancing", "similar_case_keys": ["wework", "peloton"], "similarities": ["liquidity pressure", "need for operating adjustment"], "differences": ["the survivor did not enter bankruptcy in this fixture"]}
+    }
+  ]
+}

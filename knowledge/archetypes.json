@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "archetypes": [
+    {
+      "key": "premature_scaling",
+      "name": "Premature scaling",
+      "definition": "Costs and commitments grow faster than a repeatable, self-supporting demand base.",
+      "signals": ["rapid fixed-cost growth", "recurring losses", "expansion before unit economics stabilize"],
+      "caution": "Growth alone is not evidence of failure; compare it with cash generation and demand quality."
+    },
+    {
+      "key": "fixed_cost_liquidity_crunch",
+      "name": "Fixed-cost liquidity crunch",
+      "definition": "Large contractual or operating commitments reduce flexibility as liquidity shrinks.",
+      "signals": ["lease or fixed obligations", "cash decline", "going-concern disclosure", "restructuring"],
+      "caution": "The pattern does not establish that any one obligation caused a failure."
+    },
+    {
+      "key": "unit_economics_liquidity",
+      "name": "Unit-economics and liquidity squeeze",
+      "definition": "The cost of serving or acquiring demand remains too high while funding becomes constrained.",
+      "signals": ["negative contribution indicators", "cash burn", "lower demand", "limited financing alternatives"],
+      "caution": "Company-level metrics may hide improving or declining segments."
+    },
+    {
+      "key": "leverage_refinancing",
+      "name": "Leverage and refinancing pressure",
+      "definition": "Debt obligations and refinancing conditions become a central constraint on the operating business.",
+      "signals": ["interest burden", "maturity wall", "debt exchange", "covenant pressure"],
+      "caution": "A restructuring can enable survival; it is not automatically a failure signal."
+    },
+    {
+      "key": "retail_demand_execution",
+      "name": "Retail demand and execution erosion",
+      "definition": "Demand loss, inventory issues, or store execution weaken revenue while operating costs remain high.",
+      "signals": ["comparable-sales decline", "inventory pressure", "margin compression", "store closures"],
+      "caution": "Macro demand shifts and company-specific execution can coexist."
+    },
+    {
+      "key": "governance_control",
+      "name": "Governance or control breakdown",
+      "definition": "Decision rights, oversight, disclosures, or incentives appear misaligned with durable risk management.",
+      "signals": ["executive turnover", "restatement", "control disclosure", "board conflict"],
+      "caution": "Governance events require primary evidence and should not be used as personality judgments."
+    },
+    {
+      "key": "demand_shock",
+      "name": "Demand or market shock",
+      "definition": "A change in customer behavior, market prices, or financing conditions quickly challenges an existing model.",
+      "signals": ["sharp volume change", "market-price shift", "forecast withdrawal", "rapid revenue reversal"],
+      "caution": "A shock may reveal pre-existing fragility rather than be the sole cause."
+    },
+    {
+      "key": "operational_complexity",
+      "name": "Operational complexity overload",
+      "definition": "Execution complexity, fragmented systems, or a difficult operating footprint prevent planned efficiency gains.",
+      "signals": ["restructuring costs", "repeated guidance misses", "integration challenges", "service-quality issues"],
+      "caution": "Operational difficulty should be tied to dated evidence, not broad labels."
+    }
+  ]
+}

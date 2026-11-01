@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "content_notice": "These are short hand-written comparison notes for retrieval. They do not establish facts for a live report and must be paired with evidence from the active run.",
+  "cases": [
+    {
+      "key": "wework",
+      "company": "WeWork",
+      "outcome": "bankruptcy process",
+      "archetype_keys": ["fixed_cost_liquidity_crunch", "premature_scaling"],
+      "summary": "A flexible-office business with large contractual commitments, recurring losses, and later liquidity pressure.",
+      "signals": ["lease commitments", "cash pressure", "going-concern disclosure"],
+      "differences_to_check": ["contract structure", "post-pandemic demand effects", "capital structure"]
+    },
+    {
+      "key": "bed_bath_beyond",
+      "company": "Bed Bath & Beyond",
+      "outcome": "bankruptcy process",
+      "archetype_keys": ["retail_demand_execution", "fixed_cost_liquidity_crunch"],
+      "summary": "A legacy retailer that faced sales, inventory, and liquidity pressure before restructuring.",
+      "signals": ["retail demand pressure", "cash constraints", "store footprint"],
+      "differences_to_check": ["merchandise mix", "supplier relationships", "e-commerce competition"]
+    },
+    {
+      "key": "bird_global",
+      "company": "Bird Global",
+      "outcome": "bankruptcy process",
+      "archetype_keys": ["unit_economics_liquidity", "demand_shock"],
+      "summary": "A micromobility operator facing a capital-intensive operating model, demand variation, and liquidity pressure.",
+      "signals": ["cash burn", "operating-cost sensitivity", "financing constraints"],
+      "differences_to_check": ["city regulation", "fleet economics", "seasonality"]
+    },
+    {
+      "key": "carvana",
+      "company": "Carvana",
+      "outcome": "survivor control",
+      "archetype_keys": ["leverage_refinancing", "demand_shock"],
+      "summary": "An online vehicle retailer that faced severe financing and demand pressure but remained operating after adjustment actions.",
+      "signals": ["debt pressure", "used-vehicle demand sensitivity", "operating changes"],
+      "differences_to_check": ["debt exchange structure", "market recovery", "liquidity actions"]
+    },
+    {
+      "key": "peloton",
+      "company": "Peloton",
+      "outcome": "survivor control",
+      "archetype_keys": ["demand_shock", "operational_complexity"],
+      "summary": "A connected-fitness company that faced post-demand-surge adjustment, inventory, and operating restructuring challenges.",
+      "signals": ["demand normalization", "inventory pressure", "cost restructuring"],
+      "differences_to_check": ["subscription mix", "brand strength", "liquidity runway"]
+    },
+    {
+      "key": "sears",
+      "company": "Sears Holdings",
+      "outcome": "bankruptcy process",
+      "archetype_keys": ["retail_demand_execution", "leverage_refinancing"],
+      "summary": "A large retailer that experienced long-running competitive, operating, and financial pressure.",
+      "signals": ["sales erosion", "store closures", "debt pressure"],
+      "differences_to_check": ["asset sales", "brand portfolio", "duration of decline"]
+    },
+    {
+      "key": "toys_r_us",
+      "company": "Toys R Us",
+      "outcome": "bankruptcy and liquidation",
+      "archetype_keys": ["leverage_refinancing", "retail_demand_execution"],
+      "summary": "A specialty retailer whose debt burden and retail competition constrained turnaround flexibility.",
+      "signals": ["high leverage", "retail competition", "liquidity pressure"],
+      "differences_to_check": ["private-equity ownership", "supplier relationships", "international operations"]
+    },
+    {
+      "key": "wirecard",
+      "company": "Wirecard",
+      "outcome": "insolvency process",
+      "archetype_keys": ["governance_control"],
+      "summary": "A payments company whose collapse involved alleged accounting irregularities and governance failures.",
+      "signals": ["restatement", "audit issues", "leadership disruption"],
+      "differences_to_check": ["allegations versus verified filings", "regulatory setting", "fraud-specific evidence"]
+    },
+    {
+      "key": "ftx",
+      "company": "FTX",
+      "outcome": "bankruptcy process",
+      "archetype_keys": ["governance_control", "demand_shock"],
+      "summary": "A digital-asset platform whose collapse centered on governance, customer-asset, and liquidity questions.",
+      "signals": ["governance concerns", "liquidity run", "rapid confidence loss"],
+      "differences_to_check": ["regulatory regime", "customer asset custody", "non-comparable accounting"]
+    },
+    {
+      "key": "theranos",
+      "company": "Theranos",
+      "outcome": "wind-down",
+      "archetype_keys": ["governance_control", "operational_complexity"],
+      "summary": "A health-technology startup whose failure involved product-validation, governance, and disclosure issues.",
+      "signals": ["product validation risk", "oversight failures", "regulatory scrutiny"],
+      "differences_to_check": ["private-company information limits", "medical regulation", "criminal allegations"]
+    },
+    {
+      "key": "luckin_coffee",
+      "company": "Luckin Coffee",
+      "outcome": "restatement and restructuring",
+      "archetype_keys": ["governance_control"],
+      "summary": "A consumer company that faced accounting issues, delisting pressure, and later restructuring.",
+      "signals": ["restatement", "delisting notice", "leadership change"],
+      "differences_to_check": ["post-restructuring outcome", "jurisdiction", "audit evidence"]
+    },
+    {
+      "key": "zoom",
+      "company": "Zoom Video Communications",
+      "outcome": "survivor control",
+      "archetype_keys": ["demand_shock"],
+      "summary": "A company that experienced a major demand surge and later normalization without being a business-failure case.",
+      "signals": ["demand normalization", "revenue deceleration", "market re-rating"],
+      "differences_to_check": ["cash position", "recurring revenue", "operating leverage"]
+    }
+  ]
+}
